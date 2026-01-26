@@ -12,6 +12,9 @@ The project is ideal for learning how spring security config and filterchain wor
 - Custom `UserDetailsService`
 - Password validation
 - Uses Spring Data JPA and Hibernate
+- Register new User
+- Passwords are securely hashed using BCrypt before storing in the database
+- Plain-text passwords are never stored
 
 ---
 
