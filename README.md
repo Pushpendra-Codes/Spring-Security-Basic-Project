@@ -15,7 +15,8 @@ The project is ideal for learning how spring security config and filterchain wor
 - Register new User
 - Passwords are securely hashed using BCrypt before storing in the database
 - Plain-text passwords are never stored
-
+- Login Verification with Username and Password
+- JWT Token Generated when user Login
 ---
 
 ## Tech Stack
