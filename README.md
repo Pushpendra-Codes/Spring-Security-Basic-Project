@@ -17,13 +17,9 @@ The project is ideal for learning how spring security config and filterchain wor
 - Plain-text passwords are never stored
 - Login Verification with Username and Password
 - JWT Token Generated when user Login
-<<<<<<< HEAD
-=======
 - JWT Token verification
 - Login with JWT Token feature
 
->>>>>>> 8394804 (implement JWT Token verification and Login with JWT Token)
----
 
 ## Tech Stack
 
@@ -36,8 +32,6 @@ The project is ideal for learning how spring security config and filterchain wor
 - Spring A
 - JWT (JSON Web Token)
 
-
----
 
 ## Project Structure
 
