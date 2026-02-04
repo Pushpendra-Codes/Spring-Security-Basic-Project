@@ -17,6 +17,12 @@ The project is ideal for learning how spring security config and filterchain wor
 - Plain-text passwords are never stored
 - Login Verification with Username and Password
 - JWT Token Generated when user Login
+<<<<<<< HEAD
+=======
+- JWT Token verification
+- Login with JWT Token feature
+
+>>>>>>> 8394804 (implement JWT Token verification and Login with JWT Token)
 ---
 
 ## Tech Stack
@@ -27,27 +33,46 @@ The project is ideal for learning how spring security config and filterchain wor
 - Spring Data JPA (Hibernate)
 - PostgreSQL 
 - Maven
+- Spring A
+- JWT (JSON Web Token)
+
 
 ---
 
 ## Project Structure
 
-demo
- ├── src
- │    ├── main
- │    │    ├── java
- │    │    │    └── com/patidar/demo
- │    │    │         ├── DemoApplication.java
- │    │    │         ├── config/SecurityConfig.java 
- │    │    │         ├── model
- │    │    │         │    ├── Users.java 
- │    │    │         │    ├── Users.java 
- │    │    │         │    └── UserPrincipal 
- │    │    │         ├── repository/UserRepo.java
- │    │    │         └── service/MyUserDetailsService.java
- │    │    └── resources
- │    │         └── application.properties
- └── pom.xml
+
+Spring-Security-Basics/
+├── .idea/
+├── demo/
+│   ├── .mvn/
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/
+│   │       │   └── com/patidar/demo/
+│   │       │       ├── config/
+│   │       │       │   ├── JwtFilter.java
+│   │       │       │   └── SecurityConfig.java
+│   │       │       ├── controller/
+│   │       │       │   ├── Controller.java
+│   │       │       │   └── UserController.java
+│   │       │       ├── model/
+│   │       │       │   ├── UserPrincipal.java
+│   │       │       │   └── Users.java
+│   │       │       ├── repository/
+│   │       │       │   └── UserRepo.java
+│   │       │       ├── service/
+│   │       │       │   ├── JWTService.java
+│   │       │       │   ├── MyUserDetailsService.java
+│   │       │       │   └── UserService.java
+│   │       │       └── DemoApplication.java
+│   │       └── resources/
+│   │           ├── static/
+│   │           ├── templates/
+│   │           └── application.properties
+│   └── pom.xml
+└── README.md
+
 
 
 

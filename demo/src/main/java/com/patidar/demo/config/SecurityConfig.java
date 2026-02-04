@@ -16,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity     //go with this config
@@ -23,6 +24,10 @@ public class SecurityConfig {
 
     @Autowired
     private UserDetailsService userDetailsService;
+
+
+    @Autowired
+    private JwtFilter jwtFilter;
 
 
   @Bean
@@ -44,6 +49,7 @@ public class SecurityConfig {
                   // .formLogin(Customizer.withDefaults())  //form login for form of  login on browser
                    .httpBasic(Customizer.withDefaults())   //httpBasic for postman
                    .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                  .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                    .build();
 
 
